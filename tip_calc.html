@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tip Calculator</title>
+
+<!-- Normalize.css Styles make all elements render consistently through browsers! Google, download and paste to its own stylesheet-->
+<link rel="stylesheet" type="text/css" href="normalize.css">
+
+<!-- custom styles -->
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css?family=Cabin|Nunito+Sans|Open+Sans" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div id="container">
+    <h1>Tip Calculator</h1>
+    <div id="calculator">
+
+      <form>
+        <label>How much was your bill?<br>
+          € <input type="text" id="billAmount">
+        </label>
+
+        <label>How was your service?<br>
+          <select id="serviceQuality">
+            <option disabled selected value="0">-- Choose an option --</option>
+            <option value="0.3">30% - Awesome</option>
+            <option value="0.2">20% - Good</option>
+            <option value="0.15">15% - It was okay</option>
+            <option value="0.10">10% - Quite lousy</option>
+            <option value="0.05">5% - Just bad</option>
+          </select>
+          </label>
+          <label>How many people were sharing the bill?<br>
+            <input type="text" id="totalPeople"> people
+          </label>
+          <button type="button" id="calculate">Calculate!</button>
+      </form>
+    </div> <!-- calculator -->
+
+    <div id="totalTip">
+      <sup>$</sup><span id="tip">0.00</span>
+      <small id="each">each</small>
+
+
+    </div> <!-- totalTip -->
+  </div> <!-- container -->
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
